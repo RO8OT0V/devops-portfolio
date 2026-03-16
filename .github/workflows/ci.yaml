@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checout code
-        uses: action/chechout@v4
+      - name: Checkout code
+        uses: action/checkout@v4
 
       - name: Build Go app
         run: |
@@ -24,24 +24,24 @@ jobs:
           cd 01-dockerized-app
           go test ./.. 2>/dev/null || echo "No tests yet"
 
-docker:
-  runs-on: ubuntu-latest
-  needs: build
-
-  steps:
-    - name: Checkout code
-      uses: action/checkout@v4
-
-    - name: Login to GitHub Container Registry
-      uses: docker/login-action@v3
-      with:
-        registry: ghcr.io
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Build and push Docker image
-      uses: docker/build-push-action@v5
-      with:
-        context: ./01-dockerized-app
-        push: true
-        tags: ghcr.io/${{ github.repository }}/myapp:latest
+  docker:
+    runs-on: ubuntu-latest
+    needs: build
+  
+    steps:
+      - name: Checkout code
+        uses: action/checkout@v4
+  
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+  
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./01-dockerized-app
+          push: true
+          tags: ghcr.io/${{ github.repository }}/myapp:latest
