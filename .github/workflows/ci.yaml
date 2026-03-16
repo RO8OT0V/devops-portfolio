@@ -44,4 +44,4 @@ jobs:
         with:
           context: ./01-dockerized-app
           push: true
-          tags: ghcr.io/${{ github.repository }}/myapp:latest
+          tags: ghcr.io/ro8ot0v/devops-portfolio/myapp:latest
