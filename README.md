@@ -1,30 +1,81 @@
 # DevOps Portfolio
 
-Portfolio showcasing practical DevOps skills: containerization, orchestration, CI/CD, and infrastructure as code.
+Привет! Я начинающий DevOps-инженер. Здесь собраны мои учебные проекты, демонстрирующие навыки в области контейнеризации, оркестрации и CI/CD.
 
-## Projects
+## 📋 Проекты
 
-| # | Project | Technologies | Status |
-|---|---------|--------------|--------|
-| 01 | [Dockerized Application](./01-dockerized-app/) | Docker, Docker Compose, Multi-stage builds | 🚧 In Progress |
-| 02 | [Kubernetes Deployment](./02-k8s-deployment/) | Kubernetes, Helm, Ingress | ⏳ Pending |
-| 03 | [CI/CD Pipeline](./03-cicd-pipeline/) | GitHub Actions, Testing, Auto-deploy | ⏳ Pending |
-| 04 | [Infrastructure as Code](./04-terraform-ansible/) | Terraform, Ansible, Cloud | ⏳ Pending |
-
-## Skills
-
-- **Containerization:** Docker, Docker Compose, multi-stage builds
-- **Orchestration:** Kubernetes, Helm charts, deployments, services, ingress
-- **CI/CD:** GitHub Actions, GitLab CI, automated testing and deployment
-- **IaC:** Terraform, Ansible, cloud infrastructure provisioning
-- **Security:** OWASP Top 10 mitigation, container hardening, secrets management
-
-## Contact
-
-- GitHub: [your-username](https://github.com/your-username)
-- Email: your.email@example.com
-- LinkedIn: [your-profile](https://linkedin.com/in/your-profile)
+| # | Проект | Технологии | Статус |
+|---|--------|------------|--------|
+| 01 | [Dockerized Go Application](./01-dockerized-app/) | Docker, Multi-stage build | ✅ Готов |
+| 02 | [Kubernetes Deployment](./02-k8s-deployment/) | K8s, Deployment, Service, Probes | ✅ Готов |
+| 03 | [CI/CD Pipeline](./03-cicd-pipeline/) | GitHub Actions, GHCR | ✅ Готов |
 
 ---
 
-*Open to DevOps opportunities and freelance projects*
+## 🛠 Навыки
+
+### Containerization
+- Docker, Docker Compose
+- Multi-stage builds
+- Image optimization
+
+### Orchestration
+- Kubernetes (Deployment, Service, Ingress)
+- Health checks (liveness/readiness probes)
+- Resource management
+
+### CI/CD
+- GitHub Actions
+- Automated testing
+- Docker image build & push to GHCR
+
+### Programming
+- Go (basic)
+- Bash scripting
+
+---
+
+## 📸 CI/CD Pipeline
+
+![CI/CD Workflow](./.github/workflows/success.png)
+
+*Автоматический пайплайн: build → test → docker build → push*
+
+---
+
+## 🚀 Быстрый старт
+
+### Запуск приложения локально
+
+```bash
+# Проект 1: Docker
+cd 01-dockerized-app
+docker-compose up --build
+
+# Проект 2: Kubernetes (нужен кластер)
+cd 02-k8s-deployment
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+```
+
+### Проверка работы
+
+```bash
+# Health check
+curl http://localhost:8080/health
+
+# Основное приложение
+curl http://localhost:8080/
+```
+
+---
+
+## 📬 Контакты
+
+- **GitHub:** [RO8OT0V](https://github.com/RO8OT0V)
+- **Email:** [твой email]
+- **Telegram:** [твой ник]
+
+---
+
+*Открыт к предложениям по работе и фриланс-заказам!*
