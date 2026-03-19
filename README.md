@@ -1,5 +1,7 @@
 # DevOps Portfolio
 
+[![CI/CD](https://github.com/RO8OT0V/devops-portfolio/actions/workflows/ci.yaml/badge.svg)](https://github.com/RO8OT0V/devops-portfolio/actions/workflows/ci.yaml)
+
 Привет! Я начинающий DevOps-инженер. Здесь собраны мои учебные проекты, демонстрирующие навыки в области контейнеризации, оркестрации и CI/CD.
 
 ## 📋 Проекты
@@ -37,8 +39,6 @@
 
 ## 📸 CI/CD Pipeline
 
-![CI/CD Workflow](./.github/workflows/success.png)
-
 *Автоматический пайплайн: build → test → docker build → push*
 
 ---
@@ -73,8 +73,8 @@ curl http://localhost:8080/
 ## 📬 Контакты
 
 - **GitHub:** [RO8OT0V](https://github.com/RO8OT0V)
-- **Email:** [твой email]
-- **Telegram:** [твой ник]
+- **Email:** ro8otov@mail.ru
+- **Telegram:** @robotov
 
 ---
 
